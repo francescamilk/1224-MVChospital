@@ -42,9 +42,8 @@ class PatientRepository
             @room_repo.find(room_id)
             # we need to connect room to patient
             patient.room = room
-
-            @next_id = @patients.last.id += 1 unless @patients.empty?
         end
+        @next_id = @patients.last.id + 1 unless @patients.empty?
     end
 end
 
